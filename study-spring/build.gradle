@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+}
+
+group = 'dev.luyee'
+version = '6.2.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation(project(':spring-context'))         // 引入当前项目 spring-context
+    implementation('org.projectlombok:lombok:1.18.24') // 引入外部依赖 lombok
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}
